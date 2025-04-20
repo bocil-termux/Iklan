@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemasangan Iklan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <header>
+            <h1>Pasang Iklan Anda</h1>
+            <p>Masukkan detail iklan Anda dan dapatkan audiens yang tepat.</p>
+            <p class=gratis>"Uji coba gratis!"</p>
+            <p>(Iklan Anda bisa tayang tanpa biaya selama pengujian)</p>
+        </header>
+
+        <form id="adForm">
+            <label for="targetUrl">Alamat Website Target:</label>
+            <input type="url" id="targetUrl" placeholder="Masukkan URL website (opsional)">
+
+            <label for="title">Judul Iklan:</label>
+            <input type="text" id="title" placeholder="Masukkan judul iklan" required>
+
+            <label for="description">Deskripsi:</label>
+            <textarea id="description" rows="4" placeholder="Tulis deskripsi singkat"></textarea>
+
+            <label for="category">Kategori:</label>
+            <select id="category">
+                <option value="Bisnis">Bisnis</option>
+                <option value="Investasi">Investasi</option>
+                <option value="Produk">Produk</option>
+                <option value="Teknologi">Teknologi</option>
+                <option value="Properti">Properti</option>
+                <option value="Jasa">Jasa</option>
+            </select>
+
+            <label for="model">Model:</label>
+            <select id="model">
+                <option value="Default">Default</option>
+                <option value="Soft Sell">Soft Sell</option>
+                <option value="Hard Sell">Hard Sell</option>
+                <option value="Emotional Appeal">Emotional Appeal</option>
+            </select>
+
+            <button type="submit" id="submitBtn">Pasang Iklan</button>
+        </form>
+    </div>
+
+    <div class="container" id="adsContainer" style="display: none;">
+        <header>
+            <h1>Iklan Telah Dipasang!</h1>
+            <p>Lihat daftar website yang telah mempublikasikan iklan Anda.</p>
+        </header>
+
+        <ul id="adsList"></ul>
+
+        <footer>
+            <p>&copy; 2025 Pemasangan Iklan Online</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
